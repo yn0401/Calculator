@@ -1,0 +1,35 @@
+<table class="calculator" >
+  <tr>
+    <td colspan="3"> <input class="display-box" type="text" id="result" [(ngModel)]="calculatorService.hienThi" disabled /> </td>
+ 
+    <!-- clearScreen() function clears all the values -->
+    <td> <input type="button" value="C" (click)="clear()" id="btn" /> </td>
+  </tr>
+  <tr>
+    <!-- display() function displays the value of clicked button -->
+    <td><app-button [name]="'1'" ></app-button></td>
+    <td><app-button [name]="'2'" ></app-button></td>
+    <td><app-button [name]="'3'" ></app-button></td>
+    <td><app-button [name]="'+'" ></app-button></td>
+  </tr>
+  <tr>
+    <td><app-button [name]="'4'" ></app-button></td>
+    <td><app-button [name]="'5'" ></app-button></td>
+    <td><app-button [name]="'6'" ></app-button></td>
+    <td><app-button [name]="'-'" ></app-button></td>
+  </tr>
+  <tr>
+    <td><app-button [name]="'7'" ></app-button></td>
+    <td><app-button [name]="'8'" ></app-button></td>
+    <td><app-button [name]="'9'" ></app-button></td>
+    <td><app-button [name]="'/'" ></app-button></td>
+  </tr>
+  <tr>
+    <td> <input type="button" value="." (click)="calculate('.')" /> </td>
+    <td> <input type="button" value="0" (click)="calculate('0')" /> </td>
+ 
+    <!-- calculate() function evaluates the mathematical expression -->
+    <td> <input type="button" value="=" (click)="calculate('=')" id="btn" /> </td>
+    <td><app-button [name]="'*'" ></app-button></td>
+  </tr>
+</table>
